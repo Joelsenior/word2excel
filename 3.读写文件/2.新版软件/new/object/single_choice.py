@@ -19,6 +19,8 @@ ans_pattern = re.compile(r'^答案.*\n')
 
 def single_choice_block(line):
     result = []
+    #index默认为0
+    index =0
     for i,item in enumerate(line):
         if digit_pattern.match(item):
             #形成一个二维空数组
